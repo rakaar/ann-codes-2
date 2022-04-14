@@ -1,0 +1,25 @@
+Matlab changes:
+In Matlab, you have to change the connection string to ConnectRZ6 instead of ConnectRX6. 
+Also, the supported sampling rates on the RZ6 are more fixed than the RX6, so you should 
+run the circuit at the maximum 195312.5Hz.  This is okay because the RZ DSPs have twice 
+the capacity of the RX DSPs, so the cycle usage of your circuit running at ~200k on the 
+RZ6 is only 46%.  You will have to resample your stimuli to match this new rate.
+
+RCX Circuit changes:
+The RZ6 inputs and outputs are handled in the device macros, so replace the DacOut 
+components with an RZ6_Audio_Out macro.
+I've made these changes to the circuit (attached).
+The sample delays on the RZ6 are slightly different.  ADC delay is 66 samples, 
+DAC delay is 31 samples.
+
+The maximum samples you can write into the buffer is dependent on the buffer size (see 
+RamBuf).  You can find the size in Matlab by calling 'GetTagSize' on the tags connected 
+to the Data port of the buffers, like this:
+sz1 = RX6_gPL.GetTagSize('play')
+sz2 = RX6_gPL.GetTagSize('play_2')
+
+Our ActiveX examples include a 2 channel continuous play example which uses a double-
+buffering technique so that you can play stimuli larger than the physical buffer size 
+on the hardware.  You can get the examples on our downloads page: http://www.tdt.com/
+downloads.html
+Here is a direct link: http://www.tdt.com/files/examples/ActiveXExamples.zip

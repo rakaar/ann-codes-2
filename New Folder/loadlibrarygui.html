@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	</head>
+	<body>
+		<H1>Generic DLL GUI Help</H1>
+		<P>This is a simple help file that explains the different options of the GUI and a 
+			brief explanation of each option.&nbsp; This is not provided as a fully 
+			qualified help file.&nbsp; For background reading you should consult the 
+			documentation that came&nbsp;with the Generic DLL feature of MATLAB and your 
+			DLL that you want to use from MATLAB.</P>
+		<H2>Project Name</H2>
+		<P>The project name is a string that will be use as the alias for the DLL 
+			name.&nbsp; This is needed because sometimes you don't want to use the full DLL 
+			name and you would like to have a more descriptive name.&nbsp; For example if 
+			you are talking to a VISA32.DLL you probably would call the project 
+			"visa"&nbsp; or "tekvisa" both of these names will be used when calling into 
+			the library from MATLAB and will be used in the M-Wrapper functions directory 
+			name.&nbsp;
+		</P>
+		<P>Valid strings are any MATLAB valid variable name.&nbsp; This means the first 
+			character must be a letter and not a&nbsp;underscore or numbers.</P>
+		<H2>DLL Name</H2>
+		<P>This is the name of the DLL you wish to load.&nbsp; This can be either the full 
+			path and file name or if the file is on the system path then just the file name 
+			will work.&nbsp; The dll extension is expected to be part of the string.</P>
+		<H2>Header Name</H2>
+		<P>This is the header file that defines the DLL functions declarations that are 
+			exported from the DLL.&nbsp;
+		</P>
+		<H2>Additional Include Dir</H2>
+		<P>Some header files include other header files that are in a different 
+			directory.&nbsp; If this is the case with your header file then you can add the 
+			additional include directories here.&nbsp; If multiple directories are needed 
+			then separate the directories with a semi-colon ";"</P>
+		<H2>Prototype Helper</H2>
+		<P>
+			Sometimes you need to help the processing of the files.&nbsp; For example some 
+			"C" declarations of int8 should be characters in MATLAB and sometimes they 
+			should be data stored in size of int8.&nbsp; The Generic DLL loading can not 
+			distinguish the difference between what the library is expecting.&nbsp; But if 
+			you read the documentation that came with your library then you should be able 
+			to determine this.&nbsp; If you want to help generate the 
+			correct&nbsp;declarations you can create a file that list the C declaration and 
+			then the MATLAB type on a single line.&nbsp; The perl script uses this 
+			to&nbsp;determine what to the variable types are in MATLAB. ( An example file 
+			is included: "mytypes.txt")</P>
+		<H2>Include Standard Windows Headers</H2>
+		<P>Some header files require you to include the windows.h file in addition to the 
+			header file.&nbsp; By checking this box the GUI will automatically generate a 
+			new header file that contains the include of the windows.h file above the 
+			header file.</P>
+		<H2>Generate M-Wrappers for Functions</H2>
+		<P>This option will generate a directory below your current directory.&nbsp; In it 
+			will be a series of M-files that MATLAB can use to call into the library.&nbsp; 
+			These files are not necessary but are generated so that you can get help and do 
+			error checking before calling into the library.&nbsp; It will also generate the 
+			M-files needed to load the library.&nbsp; Once these files are generated you 
+			can call into the functions directly without loading the library and they will 
+			take care of everything for you.</P>
+		<P>I added this feature because some of the calls into the library needed dummy 
+			parameters passed into the function that really were just returns.&nbsp; When 
+			this is the case you can modify the M-file to only pass in what you want and 
+			get back only valid responses.
+		</P>
+		<P>For example in C you may pass in an empty&nbsp;pointer to a char array and get 
+			back a valid string.&nbsp; In MATLAB you would&nbsp;expect&nbsp;return a string 
+			but not pass in anything.&nbsp; So you can modify the M-File to give normal 
+			MATLAB behavior.</P>
+		<P>Another example of when this is useful is when the header file uses #defines 
+			that you want to use in MATLAB.&nbsp; Now when you call the function you would 
+			pass in the same text as you would in C but the M-file would need to be written 
+			to convert this to the value in the #define statement. The Constants file 
+			information is use also to help with this.</P>
+		<H2>Include Constants File</H2>
+		<P>Add additional information into the M-File wrappers.&nbsp; This will add the 
+			ability to return constant information from the load command generated that 
+			returns information you may need for #defines statements in the header.</P>
+		<H2>Constants File Reader</H2>
+		<P>This is a M-File that reads in the header and returns the information you care 
+			about.&nbsp; It should return the information in a structure. ( An example file 
+			is included: "loadConstants.m")</P>
+		<H2>Constants File</H2>
+		<P>The file you wish to pass to the file reader function above.&nbsp; This is 
+			useful because sometimes the #defines are in a separate header from the main 
+			header used above.</P>
+		<H2>Functions Found</H2>
+		<P>This lists all the functions found in the DLL that will work in MATLAB.&nbsp; 
+			You can use the Apply button to see if everything is working.&nbsp; Also you 
+			can see what the C and M declarations look like to help fine tune the options 
+			until you get a desired output.&nbsp; For example you will be able to see if 
+			there are int8 variables that you want to be strings.&nbsp; If this is the case 
+			you can add them to the prototype helper file and press the apply button again.</P>
+		<H2>Errors</H2>
+		<P>This lists any error that occurred during processing of the files.</P>
+		<H1>Tips and Tricks found</H1>
+		<H3>Problem:
+		</H3>
+		<P>If you do not get any functions listed in the Functions Found section.
+		</P>
+		<H3>Possible solution:
+		</H3>
+		<P>Some header files define the functions to use __declspec(dllexport) for each 
+			function. This is wrong but some compilers don't complain. This normally 
+			happens because they gave you the header file they used to create the dll not 
+			the header file that is needed for importing the DLL. So remove this #define 
+			__declspec(dllexport) form the beginning of each function declaration. This 
+			also can be cause by some compiler switches that you needed to add that change 
+			the declaration for imported to exporting.&nbsp; Look in the top of your header 
+			file for a #define talking about the declspec and add the appropriate #defines 
+			before it.
+		</P>
+	</body>
+</html>

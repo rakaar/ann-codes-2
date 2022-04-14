@@ -1,0 +1,10 @@
+﻿Build started 2/17/2014 4:24:14 PM.
+     1>Project "C:\TDT\ActiveX\ActXExamples\vc++\TDT_ActiveX_Console\TDT_ActiveX_Console.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\TDT\ActiveX\ActXExamples\vc++\TDT_ActiveX_Console\Release\TDT_ActiveX_Console.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST:NO /PDB:"C:\TDT\ActiveX\ActXExamples\vc++\TDT_ActiveX_Console\Release\TDT_ActiveX_Console.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\TDT\ActiveX\ActXExamples\vc++\TDT_ActiveX_Console\Release\TDT_ActiveX_Console.lib" /MACHINE:X86 Release\TDT_ActiveX_Console.obj
+         TDT_ActiveX_Console.vcxproj -> C:\TDT\ActiveX\ActXExamples\vc++\TDT_ActiveX_Console\Release\TDT_ActiveX_Console.exe
+     1>Done Building Project "C:\TDT\ActiveX\ActXExamples\vc++\TDT_ActiveX_Console\TDT_ActiveX_Console.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.17

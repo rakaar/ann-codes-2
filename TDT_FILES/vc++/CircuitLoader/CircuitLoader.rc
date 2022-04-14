@@ -1,0 +1,366 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CircuitLoader.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CircuitLoader.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About CircuitLoader"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "CircuitLoader Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2002",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_CIRCUITLOADER_DIALOG DIALOGEX 0, 0, 300, 201
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Circuit Loader"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Load Circuit",BUTTON_LOAD,55,82,77,23
+    PUSHBUTTON      "Cancel",BUTTON_CANCEL,163,82,77,23
+    GROUPBOX        "RP Module",IDC_STATIC,7,7,95,72
+    CONTROL         "RP2 / RP2.1",RADIO_RP2,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,21,69,9
+    CONTROL         "RA16 Medusa",RADIO_RA16,"Button",BS_AUTORADIOBUTTON,15,34,69,9
+    CONTROL         "RV8 Barracuda",RADIO_RV8,"Button",BS_AUTORADIOBUTTON,15,47,69,9
+    CONTROL         "RL2 Stingray",RADIO_RL2,"Button",BS_AUTORADIOBUTTON,15,60,69,9
+    GROUPBOX        "Interface",IDC_STATIC,108,7,80,48
+    CONTROL         "USB",RADIO_USB,"Button",BS_AUTORADIOBUTTON | WS_GROUP,118,23,63,9
+    CONTROL         "Gigabit",RADIO_GIGABIT,"Button",BS_AUTORADIOBUTTON,118,37,63,9
+    CONTROL         "",IDC_COMMONDIALOG1,
+                    "{F9043C85-F6F2-101A-A3C9-08002B2F49FB}",NOT WS_VISIBLE | WS_TABSTOP,7,147,21,20
+    CONTROL         "",RP2_1,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,33,109,18,21
+    CONTROL         "",RP2_2,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,53,109,18,21
+    CONTROL         "",RP2_3,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,71,109,18,21
+    CONTROL         "",RP2_4,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,91,109,18,21
+    CONTROL         "",RP2_5,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,109,109,18,21
+    CONTROL         "",RP2_6,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,129,109,18,21
+    CONTROL         "",RP2_7,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,147,109,18,21
+    CONTROL         "",RP2_8,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,167,109,18,21
+    CONTROL         "",RV8_1,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,33,129,18,21
+    CONTROL         "",RV8_2,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,53,129,18,21
+    CONTROL         "",RV8_3,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,71,129,18,21
+    CONTROL         "",RV8_4,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,91,129,18,21
+    CONTROL         "",RV8_5,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,109,129,18,21
+    CONTROL         "",RV8_6,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,129,129,18,21
+    CONTROL         "",RV8_7,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,147,129,18,21
+    CONTROL         "",RV8_8,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,167,129,18,21
+    CONTROL         "",RA16_1,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,33,151,18,21
+    CONTROL         "",RA16_2,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,53,151,18,21
+    CONTROL         "",RA16_3,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,71,151,18,21
+    CONTROL         "",RA16_4,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,91,151,18,21
+    CONTROL         "",RA16_5,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,109,151,18,21
+    CONTROL         "",RA16_6,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,129,151,18,21
+    CONTROL         "",RA16_7,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,147,151,18,21
+    CONTROL         "",RA16_8,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,167,151,18,21
+    CONTROL         "",RL2_1,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,33,173,18,21
+    CONTROL         "",RL2_2,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,53,173,18,21
+    CONTROL         "",RL2_3,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,71,173,18,21
+    CONTROL         "",RL2_4,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,91,173,18,21
+    CONTROL         "",RL2_5,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,109,173,18,21
+    CONTROL         "",RL2_6,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,129,173,18,21
+    CONTROL         "",RL2_7,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,147,173,18,21
+    CONTROL         "",RL2_8,"{D323A625-1D13-11D4-8858-444553540000}",NOT WS_VISIBLE | WS_TABSTOP,167,173,18,21
+    RTEXT           "Status:",IDC_STATIC,109,63,32,11
+    LTEXT           "No RP2 circuits loaded.",STATUS_LABEL,147,63,134,11
+    RTEXT           "Device Number",IDC_STATIC,193,20,56,12,SS_CENTERIMAGE
+    EDITTEXT        EDIT_DEVNUM,252,20,18,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "CircuitLoader MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "CircuitLoader"
+            VALUE "LegalCopyright", "Copyright (C) 2002"
+            VALUE "OriginalFilename", "CircuitLoader.EXE"
+            VALUE "ProductName", "CircuitLoader Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CIRCUITLOADER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CIRCUITLOADER_DIALOG DLGINIT
+BEGIN
+    IDC_COMMONDIALOG1, 0x376, 218, 0
+0x0024, 0x0000, 0x0032, 0x0038, 0x0043, 0x0034, 0x0043, 0x0038, 0x0032, 
+0x0030, 0x002d, 0x0034, 0x0030, 0x0031, 0x0041, 0x002d, 0x0031, 0x0030, 
+0x0031, 0x0042, 0x002d, 0x0041, 0x0033, 0x0043, 0x0039, 0x002d, 0x0030, 
+0x0038, 0x0030, 0x0030, 0x0032, 0x0042, 0x0032, 0x0046, 0x0034, 0x0039, 
+0x0046, 0x0042, 0x4321, 0x1234, 0x0008, 0x0000, 0x034f, 0x0000, 0x034f, 
+0x0000, 0x3c86, 0xf904, 0x0000, 0x0006, 0x0042, 0x0000, 0x0020, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0104, 0x0000, 0x0001, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x4100, 
+0x0000, 0x0000, 0x000b, 0x0000, 0x0003, 0x0000, 0x0072, 0x0070, 0x0064, 
+0x0009, 0x0000, 0x004f, 0x0070, 0x0065, 0x006e, 0x0020, 0x0046, 0x0069, 
+0x006c, 0x0065, 0x000f, 0x0000, 0x0041, 0x006c, 0x006c, 0x0020, 0x0046, 
+0x0069, 0x006c, 0x0065, 0x0073, 0x0020, 0x0028, 0x002a, 0x002e, 0x002a, 
+0x0029, 
+    RP2_1, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RP2_2, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RP2_3, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RP2_4, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RP2_5, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RP2_6, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RP2_7, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RP2_8, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RV8_1, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RV8_2, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RV8_3, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RV8_4, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RV8_5, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RV8_6, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RV8_7, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RV8_8, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RA16_1, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RA16_2, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RA16_3, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RA16_4, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RA16_5, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RA16_6, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RA16_7, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RA16_8, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RL2_1, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RL2_2, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RL2_3, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RL2_4, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RL2_5, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RL2_6, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RL2_7, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    RL2_8, 0x376, 20, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x02ca, 0x0000, 0x0384, 0x0000, 0x0000, 
+0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About CircuitLoader..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\CircuitLoader.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

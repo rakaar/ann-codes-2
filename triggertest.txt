@@ -1,0 +1,17 @@
+Trigger test:
+
+Selected an ROI
+          		       With Trigger Synch                               Without Trigger Synch
+          		  10 frames           100 frames                      10 frames          100 frames
+
+			  File# 303	      File# 304			      File# 296		 File# 295
+High Speed               TS Image=5	     TS Image=50		     TS Image=NA         TS Image=NA
+			Duration=12s        Duration=5s			    Duration=10s       Duration=60s
+
+			  File# 302	      File# 305			      File# 297		 File# 298
+0.5 sec frames           TS Image=5	     TS Image=50		     TS Image=NA	TS Image=NA
+			Duration=12s	    Duration=80s		    Duration=10s       Duration=60s
+
+			  File# 301	      File# 306			      File# 300		 File# 299
+1 sec frames 		 TS Image=5	     TS Image=50		     TS Image=NA	TS Image=NA
+			Duration=12s	    Duration=120s		    Duration=12s       Duration=120s
